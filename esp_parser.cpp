@@ -1,5 +1,11 @@
+#include "esp_config.h"
 #include "esp_parser.h"
+#ifdef USE_FY6800
 #include "esp_fy6800.h"
+#endif USE_JY6800
+#ifdef USE_JDS8060
+#include "esp_jds8060.h"
+#endif USE_JDS8060
 
 volatile char *gReadBuffer = NULL;
 

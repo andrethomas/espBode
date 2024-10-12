@@ -1,3 +1,5 @@
+#include "esp_config.h"
+#ifdef USE_FY6800
 #include "esp_fy6800.h"
 #include <string.h>
 
@@ -160,3 +162,4 @@ void initDevice(void)
     setCh2Offset(0);
 
 }
+#endif USE_FY6800

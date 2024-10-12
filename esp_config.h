@@ -1,19 +1,27 @@
 #ifndef _ESP_CONFIG_H_
 #define _ESP_CONFIG_H_
 
+//#define USE_FY6800
+#define USE_JDS8060
+
+// Enable main loop speed targetting to reduce power requirements
+// and heat dissipation from ESP8266
+
+#define SLEEP_DYNAMIC
+
 /* Select either AP or CLIENT mode:
     - AP - creates new network that oscilloscope can connect to
     - CLIENT - joins existing network
     */
-#define WIFI_MODE_AP
-//#define WIFI_MODE_CLIENT
+//#define WIFI_MODE_AP
+#define WIFI_MODE_CLIENT
 
 /* WiFi credentials */
-#define WIFI_SSID             "wlan_ssid"
-#define WIFI_PSK              "wlan_key"
+#define WIFI_SSID             "wlan_ssid" // wlan_ssid
+#define WIFI_PSK              "wlan_key"  // wlan_key
 
 /* Comment this for DHCP. However you'll need to obtain IP somehow. */
-#define STATIC_IP
+//#define STATIC_IP
 
 /* Static ip configuration */
 #ifdef STATIC_IP

@@ -219,6 +219,7 @@ uint8_t handleVxi11(uint8_t *packet, WiFiClient client)
         return 0;
         break;
     }
+    return 0;
 }
 
 uint8_t handlePacket(WiFiClient client)
